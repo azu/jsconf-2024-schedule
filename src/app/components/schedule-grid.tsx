@@ -201,10 +201,10 @@ export function ScheduleGrid() {
               </p>
             )}
           </CardContent>
+          <CardHeader>
+            <CardTitle>Venue Map</CardTitle>
+          </CardHeader>
           <CardContent>
-            <CardHeader>
-              <CardTitle>Venue Map</CardTitle>
-            </CardHeader>
             <Image
               src="https://jsconf.jp/2024/static/venue-map-3b894dbd67c6de02deba33320396a35d.svg"
               className="w-full"
