@@ -33,6 +33,11 @@ export const ScheduleProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   }, [])
 
   const updateURL = async () => {
+    const hasSelectedSessions = Object.keys(selectedSessions).length > 0
+    if (!hasSelectedSessions) {
+      window.history.replaceState(null, '', window.location.pathname)
+      return
+    }
     const sessionsParam = await compressToBase64(JSON.stringify(selectedSessions))
     window.history.replaceState(null, '', `?sessions=${encodeURIComponent(sessionsParam)}`)
   }
