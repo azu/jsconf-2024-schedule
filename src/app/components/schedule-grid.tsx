@@ -10,6 +10,7 @@ import { useSchedule } from "../contexts/ScheduleContext"
 import { Input } from "@/components/ui/input"
 import { useState } from "react"
 import { Check, Copy } from 'lucide-react'
+import Image from "next/image";
 
 const trackColors = {
   A: "bg-orange-500",
@@ -199,6 +200,18 @@ export function ScheduleGrid() {
                 No sessions selected. Click on sessions above to create your schedule.
               </p>
             )}
+          </CardContent>
+          <CardContent>
+            <CardHeader>
+              <CardTitle>Venue Map</CardTitle>
+            </CardHeader>
+            <Image
+              src="https://jsconf.jp/2024/static/venue-map-3b894dbd67c6de02deba33320396a35d.svg"
+              className="w-full"
+              width={800}
+              height={600}
+              loading={"lazy"}
+              alt="Venue Map"/>
           </CardContent>
         </Card>
       </div>

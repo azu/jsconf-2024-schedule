@@ -21,6 +21,13 @@ export default function Page() {
           <ScheduleGrid/>
         </div>
       </div>
+      <footer className="bg-muted/60 text-center py-4">
+        <p className="text-muted-foreground text-sm">
+          Source code available at <a href="https://github.com/azu/jsconf-jp-2024-scheduler"
+                                      className="text-blue-600">
+          GitHub</a>
+        </p>
+      </footer>
     </ScheduleProvider>
   )
 }
