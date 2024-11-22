@@ -2,6 +2,7 @@
 
 import React, { createContext, useState, useContext, useEffect } from 'react'
 import { SelectedSessions, ScheduleContextType } from '../types'
+import { scheduleData } from '../data/schedule'
 
 const ScheduleContext = createContext<ScheduleContextType | undefined>(undefined)
 
@@ -20,12 +21,8 @@ export const ScheduleProvider: React.FC<{ children: React.ReactNode }> = ({ chil
     const params = new URLSearchParams(window.location.search)
     const savedSessions = params.get('sessions')
     if (savedSessions) {
-      try {
-        const parsedSessions = JSON.parse(decodeURIComponent(savedSessions))
-        setSelectedSessions(parsedSessions)
-      } catch (error) {
-        console.error('Error parsing saved sessions:', error)
-      }
+      const parsedSessions = JSON.parse(decodeURIComponent(savedSessions))
+      setSelectedSessions(parsedSessions)
     }
   }, [])
 

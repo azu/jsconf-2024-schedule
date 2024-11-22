@@ -10,7 +10,7 @@ export default function Page() {
           <p className="text-center text-muted-foreground mb-4 sm:mb-8">
             Select sessions from different tracks to create your personal schedule. Sessions run from 10:00 to 18:30.
           </p>
-          <ScheduleGrid/>
+          <ScheduleGrid />
         </div>
       </div>
     </ScheduleProvider>
