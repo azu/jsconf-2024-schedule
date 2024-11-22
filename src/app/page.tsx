@@ -1,6 +1,11 @@
 import { ScheduleGrid } from "./components/schedule-grid"
 import { ScheduleProvider } from "./contexts/ScheduleContext"
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "JSConf JP 2024 Scheduler",
+  description: "Select sessions from different tracks to create your personal schedule. Sessions run from 10:00 to 18:30.",
+}
 export default function Page() {
   return (
     <ScheduleProvider>
