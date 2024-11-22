@@ -11,7 +11,7 @@ export default function Page() {
     <ScheduleProvider>
       <div className="min-h-screen bg-muted/40 py-8">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl sm:text-4xl font-bold text-center mb-4 sm:mb-8">JSConf JP 2024 Schedule</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-center mb-4 sm:mb-8">JSConf JP 2024 Scheduler</h1>
           <p className="text-center text-muted-foreground mb-4 sm:mb-8">
             Select sessions from different tracks to create your personal schedule. Sessions run from 10:00 to 18:30.
             <br/>
