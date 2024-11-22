@@ -62,7 +62,10 @@ export function ScheduleGrid() {
       <div className="grid gap-8">
         <ScrollArea className="w-full whitespace-nowrap rounded-md border">
           <div className="flex w-max space-x-4 p-4">
-            {Object.entries(trackRooms).map(([track, room]) => (
+            {[...Object.entries(trackRooms), [
+              "☕️",
+              "2F",
+            ]].map(([track, room]) => (
               <Card key={track}
                     className={`w-[200px] flex-shrink-0 ${trackColors[track as keyof typeof trackColors]} bg-opacity-10`}>
                 <CardHeader>
@@ -80,10 +83,20 @@ export function ScheduleGrid() {
         <ScrollArea className="h-[600px] rounded-md border">
           {timeSlots.map(timeSlot => (
             <div key={timeSlot} className="flex space-x-4 p-4 border-b last:border-b-0">
-              {['A', 'B', 'C', 'D'].map(track => {
-                const session = scheduleData.find(
-                  s => s.time === timeSlot && s.track === track
-                )
+              {['A', 'B', 'C', 'D', '☕️'].map(track => {
+                const session: Session | undefined = track === '☕️' ?
+                  {
+                    time: timeSlot,
+                    track: '☕️',
+                    title: 'Coffee Break',
+                    language: 'Japanese',
+                    speaker: "☕️",
+                    duration: "10",
+                    room: "☕️"
+                  }
+                  : scheduleData.find(
+                    s => s.time === timeSlot && s.track === track
+                  )
 
                 if (!session) return <div key={track} className="w-[200px] flex-shrink-0"/>
 

@@ -4,7 +4,7 @@ export interface Session {
   title: string
   speaker?: string
   language: 'Japanese' | 'English'
-  track: 'A' | 'B' | 'C' | 'D'
+  track: 'A' | 'B' | 'C' | 'D' | '☕️'
   room: string
 }
 
