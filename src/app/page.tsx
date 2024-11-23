@@ -15,8 +15,10 @@ export default function Page() {
           <p className="text-center text-muted-foreground mb-4 sm:mb-8">
             Select sessions from different tracks to create your personal schedule.
             <br/>Sessions run from 10:00 to 18:30.
-            <br/>Official Schedule is available at <a href="https://jsconf.jp/2024/schedule/"
-                                                      className="text-blue-600">https://jsconf.jp/2024/schedule/</a>
+            <br/>Official Schedule is available at <a
+            href="https://jsconf.jp/2024/schedule/"
+            target="_blank"
+            className="text-blue-600">https://jsconf.jp/2024/schedule/</a>
           </p>
           <ScheduleGrid/>
         </div>
